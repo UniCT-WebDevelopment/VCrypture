@@ -9,10 +9,6 @@
 
 VCrypture is composed of two mainly parts: **VCrypture-API** and **VCrypture-Web**. The latter is a web server which provides the front-end as well as forwarding users' requests to the API core, whilst the former aims to perform visual cryptographic operations on images. 
 
-## Table of Contents
-
-> [ToC]
-
 ## Features
 
 ![screen_about](examples/screen_about.png)
