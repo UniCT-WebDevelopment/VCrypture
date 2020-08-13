@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Visual Crypture</title>
+  <meta content="VCrypture encrypts your secret images using Visual Cryptography. Communicate safely, share safely!"
+    name="description">
+  <meta content="VCrypture, visual cryptography, naor shamir, dhiman kasana, taghaddos latif, image, encryption, share"
+    name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header-tops">
+    <div class="container non-select">
+
+      <h1><a href="/">VCrypture</a></h1>
+      <h2><span>Communicate</span> safely, <span>share</span> safely!</h2>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container non-select">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <p>Learn more about VCrypture</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-5" data-aos="fade-right">
+          <img src="assets/img/vc-example.gif" class="img-fluid" alt="vc-example" style="height: 100%;">
+        </div>
+        <div class="col-lg-7 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>What is Visual Cryptography?</h3>
+          <p>
+            <b>Visual cryptography</b> is a cryptographic technique which allows <i>visual information</i> (pictures,
+            text, etc.) to be encrypted in such a way that the decrypted information appears as a <b>visual image</b>.
+            In 1994 Moni Naor and Adi Shamir demonstrated a <i>visual secret sharing scheme</i>, where an image was broken up into n shares so that only
+            someone with all n shares could decrypt the image, while <b>any n − 1 shares revealed no information</b>
+            about the original image. Each share was printed on a separate transparency, and decryption was performed by <b>overlaying</b> the shares.
+            When all n shares were overlaid, the original image did appear. There are several generalizations of the basic scheme
+            including k-out-of-n visual cryptography. Using a similar idea, transparencies can be used to implement a <b>one-time pad</b>
+            encryption, where one transparency is a shared random pad, and another transparency acts as the ciphertext.
+          </p>
+          <h3>About VCrypture</h3>
+          <p>
+            <a href="https://github.com/UniCT-WebDevelopment/VCrypture">VCrypture</a> is an open source online service that allows you to encrypt your <b>secret images</b> safely and send
+            the result via email directly to your recipient (or just back to you). We offer four visual cryptographic algorithms: <a href="/naorshamir">Naor Shamir</a> (binary mode),
+            <a href="/taghaddoslatif">Taghaddos Latif</a> (grayscale mode), <a href="/dhimankasana">Dhiman Kasana</a> EVCT(N, N) and <a href="/dhimankasana">Dhiman Kasana</a> EVCT(K, N) (both RGB mode).
+          </p>
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+  </section><!-- End About Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Our Services</p>
+      </div>
+
+      <div class="row non-select">
+        <div id="service-naorshamir" class="col-lg-4 col-md-4 d-flex align-items-stretch clickable"">
+          <div class=" icon-box">
+          <div class="icon"><i class="bx bx-lock"></i></div>
+          <h4><a href="/naorshamir">Naor Shamir</a></h4>
+          <p>The original algorithm. It encrypts your images using binary mode. The result will consts of two
+            shares. You can opt to decrypt the secret by manually overlaying the two shares or by usign our decryption
+            algorithm. The encryption is lossy.</p>
+        </div>
+      </div>
+
+      <div id="service-taghaddoslatif" class="col-lg-4 col-md-4 d-flex align-items-stretch mt-4 mt-md-0 clickable">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-lock"></i></div>
+          <h4><a href="/taghaddoslatif">Taghaddos Latif</a></h4>
+          <p>An improved version of Naor and Shamir. It allows you to encrypt grayscale images instead of binary images.
+            The algorithm uses the same size multiplier as Naor Shamir and also the result is composed by two shares.
+            The encryption is lossy.</p>
+        </div>
+      </div>
+
+      <div id="service-dhimankasana" class="col-lg-4 col-md-4 d-flex align-items-stretch mt-4 mt-md-0 clickable">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-lock"></i></div>
+          <h4><a href="/dhimankasana">Dhiman Kasana</a></h4>
+          <p>Two variations for color images. You can opt to use EVCT(N, N) where decryption will
+            require all of three shares to retrieve the secret, or EVCT(K, N) where only two of three shares will be
+            needed. Both encryptions are lossless as they mix steganography within visual cryptography.</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

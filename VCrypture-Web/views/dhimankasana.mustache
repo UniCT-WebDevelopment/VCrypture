@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Visual Crypture</title>
+    <meta content="VCrypture encrypts your secret images using Visual Cryptography. Communicate safely, share safely!"
+        name="description">
+    <meta content="VCrypture, visual cryptography, naor shamir, dhiman kasana, taghaddos latif, image, encryption, share"
+        name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header-tops header-top">
+        <div class="container">
+            <h1><a href="/">VCrypture</a></h1>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li class="active"><a href="/#services">Services</a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header>
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-show">
+
+        <div class="about-me container animation non-select" data-aos="fade-up">
+
+            <div class="response-wrapper">
+                <p class="error">{{error}}</p>
+                <p class="response">{{msg}}</p>
+            </div>
+
+            <div class=" section-title">
+                <h2>Dhiman Kasana</h2>
+                <p>Usage</p>
+            </div>
+
+            <div class="info-wrapper">
+                <p>
+                    Upload your files and add an email address to get the result. Wait for the operations to be
+                    performed and enjoy VCrypture! Bear in mind that EVCT(N, N) requires all of three shares to retrieve
+                    the secret, while EVCT(K, N) needs only two of three shares.
+                    <br><br>
+                    If you want to learn more about Dhiman Kasana algorithm, you can read the <a
+                        href="https://www.researchgate.net/publication/320228229_Extended_visual_cryptography_techniques_for_true_color_images"
+                        target="_blanck">paper</a>.
+                </p>
+            </div>
+        </div>
+
+        <!-- ======= About Me ======= -->
+        <div class="about-me container animation non-select" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Dhiman Kasana</h2>
+                <p>Encryption EVCT(N,N)</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
+                    <!-- Encryption -->
+                    <form action="/dhimankasana/enc" method="POST" enctype="multipart/form-data" class="form row">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        <input class="col-lg-1" id="secret1" type="file" name="image"
+                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff" required>
+                        <label class="col-lg-3" for="secret1" />Choose a file</label>
+                        <input type="hidden" name="mode" value="1">
+                        <input class="col-lg-3" type="email" name="dest" placeholder="foo@bar.com" required>
+                        <input class="col-lg-2" type="submit" value="Encrypt!">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <p style="height: 50px;"></p>
+            </div>
+
+            <div class="section-title">
+                <h2>Dhiman Kasana</h2>
+                <p>Decryption EVCT(N,N)</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-down">
+                    <!-- Decryption -->
+                    <form action="/dhimankasana/dec" method="POST" enctype="multipart/form-data" class="form row">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        <input class="col-lg-1" id="share1" type="file" name="share"
+                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff" required>
+                        <label class="col-lg-3" for="share1">Choose a file</label>
+                        <input class="col-lg-1" id="share2" type="file" name="share"
+                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff" required>
+                        <label class="col-lg-3" for="share2">Choose a file</label>
+                        <input class="col-lg-1" id="share3" type="file" name="share"
+                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff" required>
+                        <label class="col-lg-3" for="share3">Choose a file</label>
+                        <input type="hidden" name="mode" value="1">
+                        <input class="col-lg-3" type="email" name="dest" placeholder="foo@bar.com" required>
+                        <input class="col-lg-2" type="submit" value="Decrypt!">
+                    </form>
+                </div>
+            </div>
+
+        </div><!-- End About Me -->
+
+        <div class="row divider"></div>
+
+        <div class="about-me container animation non-select" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Dhiman Kasana</h2>
+                <p>Encryption EVCT(K,N)</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
+                    <!-- Encryption -->
+                    <form action="/dhimankasana/enc" method="POST" enctype="multipart/form-data" class="form row">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        <input class="col-lg-1" id="secret2" type="file" name="image"
+                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff" required>
+                        <label class="col-lg-3" for="secret2" />Choose a file</label>
+                        <input type="hidden" name="mode" value="2">
+                        <input class="col-lg-3" type="email" name="dest" placeholder="foo@bar.com" required>
+                        <input class="col-lg-2" type="submit" value="Encrypt!">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <p style="height: 50px;"></p>
+            </div>
+
+            <div class="section-title">
+                <h2>Dhiman Kasana</h2>
+                <p>Decryption EVCT(K,N)</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-down">
+                    <!-- Decryption -->
+                    <form action="/dhimankasana/dec" method="POST" enctype="multipart/form-data" class="form row">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        <input class="col-lg-1" id="share4" type="file" name="share"
+                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff" required>
+                        <label class="col-lg-3" for="share4">Choose a file</label>
+                        <input class="col-lg-1" id="share5" type="file" name="share"
+                            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff" required>
+                        <label class="col-lg-3" for="share5">Choose a file</label>
+                        <input type="hidden" name="mode" value="2">
+                        <input class="col-lg-3" type="email" name="dest" placeholder="foo@bar.com" required>
+                        <input class="col-lg-2" type="submit" value="Decrypt!">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </section><!-- End About Section -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

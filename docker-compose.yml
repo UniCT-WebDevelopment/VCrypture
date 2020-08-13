@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    networks:
+      - vcrypture
+    restart: always
+
+  api:
+    image: vcrypture-api:latest
+    container_name: vcrypture-api
+    networks:
+      - vcrypture
+    restart: always
+
+  web:
+    image: vcrypture-web:latest
+    container_name: vcrypture-web
+    ports:
+      - "80:80"
+    networks:
+      - vcrypture
+    depends_on:
+      - redis
+      - api
+    restart: always
+
+networks:
+  vcrypture:

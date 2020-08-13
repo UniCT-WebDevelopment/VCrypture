@@ -1,0 +1,21 @@
+const apiIP = 'ip';
+const apiPort = port;
+
+module.exports = {
+  app: {
+    port: <port>,
+    apiIP,
+    apiPort,
+    apiEndpoint: `http://${apiIP}:${apiPort}/api`,
+    sessionConfig: {
+      secret: '<keyboard cat>',
+      resave: false,
+      saveUninitialized: true
+    }
+  },
+  redis: {
+    host: '<redis_addr>',
+    port: <redis_port>,
+    ttl: 86400
+  }
+};

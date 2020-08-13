@@ -1,0 +1,5 @@
+# VSCode folder
+.vscode/
+
+# macOS Trash
+.DS_Store
